@@ -1,8 +1,7 @@
------
+---
 layout: post
 title: Chỉnh sửa icon của ECLIPSE gọn đẹp hơn
------
-
+---
 
 Có lẽ nhiều người thấy rằng Eclipse trên Linux sắp xếp các icon trên thanh công cụ qúa xa nhau, không gọn gàng như trên Window.
 
