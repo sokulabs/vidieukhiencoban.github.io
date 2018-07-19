@@ -25,7 +25,7 @@ class "GtkToolbar"                   style "compact-toolbar"
 widget_class "*<GtkToolbar>*<GtkButton>"    style "compact-button"
 ```
 Trước khi config:
-![Trước](https://github.com/vidieukhiencoban/vidieukhiencoban.github.io/blob/master/images/20180718_eclipse_truoc.png "Trước khi chỉnh sửa")
+![Trước]({{ site.baseurl }}/images/20180718_eclipse_truoc.png "Trước khi chỉnh sửa")
 
 Sau khi config:
-![Sau](https://github.com/vidieukhiencoban/vidieukhiencoban.github.io/blob/master/images/20180717_eclipse_sau.png "Sau khi chỉnh sửa")
+![Sau]({{ site.baseurl }}/images/20180717_eclipse_sau.png "Sau khi chỉnh sửa")
