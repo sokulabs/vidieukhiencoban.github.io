@@ -5,6 +5,14 @@ layout: default
 <article class="post">
   <h1>{{ page.title }}</h1>
 
+{% if page.tags %}
+<ul class = "tags">
+   {% for tag in page.tags %}
+      <a href="/tags#{{ tag }}" class="tag">{{ tag }}</a>
+   {% endfor %}
+</ul>
+{% endif %}
+
   <div class="entry">
     {{ content }}
   </div>
@@ -13,5 +21,11 @@ layout: default
     Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
 
+  <!-- disqus comments -->
+  {% if page.comments %}
+      <hr>
   {% include disqus.html %}
+  {% endif %}
+
+  {% include stat_counter.html %}
 </article>
