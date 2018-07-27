@@ -6,4 +6,4 @@
 
 [Qt](http://doc.qt.io/qt-5/embedded-linux.html)
 
-[](https://forum.qt.io/topic/47830/solved-no-input-on-linuxfb-and-eglfs)
+[QtForum](https://forum.qt.io/topic/47830/solved-no-input-on-linuxfb-and-eglfs)
