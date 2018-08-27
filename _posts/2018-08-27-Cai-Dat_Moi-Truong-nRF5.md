@@ -20,21 +20,56 @@ $ rm ~/gcc-arm-none-eabi-7-2018-q2-update-linux.tar.bz2
 ### 1.2 NRF5 SDK
 nRF5 SDK là 1 bộ Software Development Kit chứa source code driver và example để phát triển ứng dụng cho dòng chip nRF5.
 Phiên bản mới nhất của nRF5 SDK là 15.0, có thể tải về tại trang download của Nordic [https://developer.nordicsemi.com/nRF5_SDK](https://developer.nordicsemi.com/nRF5_SDK/).
-1. Tải về SDK
-    ```bash
-    $ cd /opt
-    $ wget https://developer.nordicsemi.com/nRF5_SDK/nRF5_SDK_v15.x.x/nRF5_SDK_15.1.0_a8c0c4d.zip
-    $ unzip nRF5_SDK_15.1.0_a8c0c4d.zip
-    ```
-2. Chỉnh sửa đường dẫn đến Toolchain trong SDK
+
+#### 1.2.1 Tải về SDK
+
+```bash
+$ cd /opt
+$ wget https://developer.nordicsemi.com/nRF5_SDK/nRF5_SDK_v15.x.x/nRF5_SDK_15.1.0_a8c0c4d.zip
+$ unzip nRF5_SDK_15.1.0_a8c0c4d.zip
+```
+
+#### 1.2.2 Chỉnh sửa đường dẫn đến Toolchain trong SDK
     
-    Để SDK nhận được Toolchain, chúng ta cần setup lại nó trong file `Makefile.posix` tại đường dẫn `$PATH-TO-SDK/components/toolchain/gcc`. Sửa lại đường dẫn đền Toolchain ở biến `GNU_INSTALL_ROOT` trông giống như dưới đây.
-    ```Makefile
-    GNU_INSTALL_ROOT ?= /opt/gcc-arm-none-eabi-7-2018-q2-update/bin/
-    GNU_VERSION ?= 6.3.1
-    GNU_PREFIX ?= arm-none-eabi
-    ```
+Để SDK nhận được Toolchain, chúng ta cần setup lại nó trong file `Makefile.posix` tại đường dẫn `$PATH-TO-SDK/components/toolchain/gcc`. Sửa lại đường dẫn đền Toolchain ở biến `GNU_INSTALL_ROOT` trông giống như dưới đây.
+
+```
+GNU_INSTALL_ROOT ?= /opt/gcc-arm-none-eabi-7-2018-q2-update/bin/
+GNU_VERSION ?= 6.3.1
+GNU_PREFIX ?= arm-none-eabi
+```
+
+#### 1.2.3 Kiểm tra SDK
+
+Để kiểm tra xem các cài đặt của chúng ta đã đúng hết chưa ta thử build 1 example có trong SDK.
+```bash
+$ cd /opt/nRF5_SDK_15.0.0_a53641a/examples/peripheral/blinky/pca10040/blank/armgcc
+$ make 
+```
+Nếu xuất hiện log build và thông báo build thành công đã xuất được file hex là các cài đặt của chúng ta đúng hết rồi. 
+```
+mkdir _build
+cd _build && mkdir nrf52832_xxaa
+Assembling file: gcc_startup_nrf52.S
+Compiling file: main.c
+Compiling file: boards.c
+Compiling file: app_error.c
+Compiling file: app_error_handler_gcc.c
+Compiling file: app_error_weak.c
+Compiling file: app_util_platform.c
+Compiling file: nrf_assert.c
+Compiling file: nrf_strerror.c
+Compiling file: system_nrf52.c
+Linking target: _build/nrf52832_xxaa.out
+text	   data	    bss	    dec	    hex	filename
+2076	    108	     28	   2212	    8a4	_build/nrf52832_xxaa.out
+Preparing: _build/nrf52832_xxaa.hex
+Preparing: _build/nrf52832_xxaa.bin
+DONE nrf52832_xxaa
+```
+
 ### 1.3 Segger JLink
+
 ### 1.4 nRF Connect 
 
 ## 2. Cài Đặt Eclipse Làm IDE
