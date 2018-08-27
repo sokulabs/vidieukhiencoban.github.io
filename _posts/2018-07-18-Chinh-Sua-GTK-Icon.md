@@ -7,7 +7,7 @@ Có lẽ nhiều người thấy rằng Eclipse trên Linux sắp xếp các ico
 
 Để các icon này xít vào nhau hơn nhìn cho gọn mắt và thẩm mỹ thì chỉ cần thêm đoạn mã dưới đây vào file **~/.gtkrc-2.0**. Nếu file **.gtkrc-2.0** chưa có sẵn trong thư mục **~** thì ta tạo file mới sau đó thêm đoạn code trên
 
-```
+```css
 style "compact-toolbar"
 {
     GtkToolbar::internal-padding = 0
