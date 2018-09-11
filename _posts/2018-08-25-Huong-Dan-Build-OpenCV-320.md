@@ -38,7 +38,10 @@ OpenCV sử dụng Cmake để quản lý source code. Mình sẽ sử dụng Cm
     8.1. Bật flag **WITH_QT**.
 
     8.2. Set đường dẫn cho các module của QT5: ...
-9. Bấm **Generate**
+
+9. Tat Precompiler header: Set `ENABLE_PRECOMPILED_HEADER=false`
+
+10. Bấm **Generate**
 
 ## 3. Build Source Code
 Sau khi đã Generate Makefile thành công, ta có thể build source code rồi. Sử dụng make để build source code. 
